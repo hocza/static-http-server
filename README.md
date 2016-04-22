@@ -90,4 +90,46 @@ Percentage of the requests served within a certain time (ms)
  100%     31 (longest request)
  ```
  
- As you can see it was 25 times faster than apache.
+ As you can see it was 25x faster than apache.
+ 
+ But for comparison, here is the `npm install http-server -g`
+ 
+ ```
+Server Software:        http-server
+Server Hostname:        test.dev
+Server Port:            8081
+
+Document Path:          /
+Document Length:        9175 bytes
+
+Concurrency Level:      100
+Time taken for tests:   0.654 seconds
+Complete requests:      1000
+Failed requests:        0
+Total transferred:      9462000 bytes
+HTML transferred:       9175000 bytes
+Requests per second:    1528.66 [#/sec] (mean)
+Time per request:       65.417 [ms] (mean)
+Time per request:       0.654 [ms] (mean, across all concurrent requests)
+Transfer rate:          14125.21 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        3    4   0.6      4       5
+Processing:    48   61  15.7     55     107
+Waiting:       41   55  15.5     49     103
+Total:         51   65  15.6     59     110
+
+Percentage of the requests served within a certain time (ms)
+  50%     59
+  66%     60
+  75%     66
+  80%     68
+  90%    109
+  95%    109
+  98%    110
+  99%    110
+ 100%    110 (longest request)
+ ```
+
+But still, of course serving from memory was still 3.8x faster. ;-)
