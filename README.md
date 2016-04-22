@@ -5,6 +5,15 @@ For now it is just a proof of concept that you could cache an entire website in 
 
 I wanted to have a fast web server for my [Hugo](http://gohugo.io) website. I hate how slowly it loads with apache or nginx.
 
+### Usage
+
+Well, it is quiet simple, first git clone
+
+1. `git clone https://github.com/hocza/static-http-server.git`
+2. copy your static website to static-http-server/www/ folder.
+3. `node index.js`
+4. Visit your site on: http://localhost:8080/
+
 ### Benchmark
 
 These benchmarks were done from the same server to the same server with `ab -n 1000 -c 100`
